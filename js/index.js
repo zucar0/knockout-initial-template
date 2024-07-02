@@ -3,6 +3,7 @@ var viewModel = {
     observable: ko.observable('Observables'),
     bindings: ko.observable('Enlace de datos'),
     condicionales: ko.observable('Condicionales'),
+    visible: ko.observable('Visible'),
     title:'Knockout.Js Fundamentals',
     subtitle: 'Binding: '
 };
