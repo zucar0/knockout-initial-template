@@ -69,7 +69,7 @@
             </div>
         </div>
       </div>
-      <!-- Cuando tenemos una Expresión tenemos que utilizar un observable como se usa en Js -->
+      <!-- Cuando tenemos una Expresión invocamos el valor actual del observable -->
       <div class="row" data-bind="if: !aceptasTerminosCondiciones()">
         <div class="col">
             <div class="alert alert-warning">
@@ -79,24 +79,41 @@
       </div>
     </div>
     <hr>
-    <div class="jumbotron">
-        <p>
-            La sintaxis del if
-        </p>
-        <p>
-            <pre><code>&lt;!DOCTYPE html&gt;
-                &lt;html lang="es"&gt;
-                &lt;head&gt;
-                    &lt;meta charset="UTF-8"&gt;
-                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-                    &lt;title&gt;Ejemplo de Code Snippets&lt;/title&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-                    &lt;h1&gt;Hola, Mundo!&lt;/h1&gt;
-                &lt;/body&gt;
-                &lt;/html&gt;
-                </code></pre>
-        </p>
+    <div class="container">
+        <div class="">
+            <p>
+                La sintaxis del condicional <strong>if</strong>
+            </p>
+            <ul>
+                <li><strong>if:aceptasTerminosCondiciones</strong>: está evaluando el observable mismo. Knockout.js se encargará de llamar automáticamente al observable para obtener su valor. Si el valor es verdadero (es decir, si el usuario ha aceptado los términos y condiciones), se muestra este bloque.
+                <br>
+                <p>
+                    <pre class="jumbotron bg-white rounded-3 p-3"><code>&lt;div class="row" data-bind="if: aceptasTerminosCondiciones"&gt;
+                        &lt;div class="col"&gt;
+                          &lt;div class="alert alert-success"&gt;
+                            &lt;h1&gt;En hora buena &lt;strong data-bind="text: nombre"&gt;&lt;/strong&gt;, haz click en el botón continuar para acceder a nuestro sitio&lt;/h1&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      </code></pre>
+                </p>
+                </li>
+                <li><strong>if: !aceptasTerminosCondiciones()</strong>: está llamando explícitamente al observable para obtener su valor y luego negándolo (!). Si el valor es falso (es decir, si el usuario no ha aceptado los términos y condiciones), se muestra este bloque
+                <br>
+                <p>
+                    <pre class="jumbotron bg-white rounded-3 p-3"><code>&lt;div class="row" data-bind="if: !aceptasTerminosCondiciones()"&gt;
+                        &lt;div class="col"&gt;
+                          &lt;div class="alert alert-warning"&gt;
+                            &lt;h4&gt;Es necesario aceptar los términos y condicionales para continuar...&lt;/h4&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      </code></pre>
+                </p>
+                </li>
+            </ul>
+            
+        </div>
     </div>
     <script type="text/javascript" src="js/jquery.slim.min.js"></script>
     <script type="text/javascript" src="js/popper.min.js"></script>
