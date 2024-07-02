@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/bootstrap.min.css">    
     <link rel="stylesheet" href="css/styles.css">    	    
-    <title>KnockoutJS - Fundamentals</title>
+    <title>KnockoutJS - listado</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -21,38 +21,37 @@
         </div>
       </nav>		
 	<div class="container pt-5">
-        <div class="row mb-3">
-            <h2 data-bind="text: title">
-
-            </h2>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <label>Observables: </label>
-                <a href="/observable.html" style="text-decoration: none;">
-                    <span class="form-control-value" data-bind="text: observable"></span>
-                </a>
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col-md-12">
-                <label>Listados: </label>
-                <a href="/listado.html" style="text-decoration: none;">
-                    <span class="form-control-value" data-bind="text: lists"></span>
-                </a>
-            </div>
-        </div>
         <hr>
         <div class="row mt-3">
             <div class="col-md-6">
-
+                <table class="table table-bordered table-hovered table-striped">
+                    <thead class="bg-primary">
+                        <tr>
+                            <th>Número</th>
+                            <th>Nombre</th>
+                            <th>Posición</th>
+                        </tr>
+                    </thead>
+                    <!-- Iteración de los elementos de data -->
+                     <!-- Si en viewModel se llamada registros en la vista tiene que usarse ese nombre -->
+                    <tbody data-bind="foreach: registros">
+                        <tr>
+                            <td data-bind="text: numero"></td>
+                            <td data-bind="text: nombre"></td>
+                            <td data-bind="text: posicion"></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
+        <hr>
     </div>
 	<script type="text/javascript" src="js/jquery.slim.min.js"></script>
 	<script type="text/javascript" src="js/popper.min.js"></script>	
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>			
 	<script type="text/javascript" src="js/knockout.min.js"></script>			
-    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/appListado.js"></script>
+    <script type="text/javascript" src="js/datos.js"></script>
+    <script type="text/javascript" src="js/viewmodel.js"></script>
 </body>
 </html>
