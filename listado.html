@@ -1,59 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/bootstrap.min.css">    
-    <link rel="stylesheet" href="css/styles.css">    	    
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>KnockoutJS - listado</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
-                <a class="nav-link" href="/observable.html">Observables</a>
-                <a class="nav-link" href="/listado.html">Listados</a>
-                <a class="nav-link" href="/binding.html">Enlace de datos</a>
-                <a class="nav-link" href="/condicionales.html">Condicionales</a>
-                <a class="nav-link" href="/visible.html">Visible</a>
-            </div>
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="/index.html"
+              >Home</a
+            >
+            <a class="nav-link" href="/observable.html">Observables</a>
+            <a class="nav-link" href="/listado.html">Listados</a>
+            <a class="nav-link" href="/binding.html">Enlace de datos</a>
+            <a class="nav-link" href="/condicionales.html">Condicionales</a>
+            <a class="nav-link" href="/visible.html">Visible</a>
           </div>
         </div>
-      </nav>		
-	<div class="container pt-5">
-        <hr>
-        <div class="row mt-3">
-            <div class="col-md-6">
-                <table class="table table-bordered table-hovered table-striped">
-                    <thead class="bg-primary">
-                        <tr>
-                            <th>Número</th>
-                            <th>Nombre</th>
-                            <th>Posición</th>
-                        </tr>
-                    </thead>
-                    <!-- Iteración de los elementos de data -->
-                     <!-- Si en viewModel se llamada registros en la vista tiene que usarse ese nombre -->
-                    <tbody data-bind="foreach: registros">
-                        <tr>
-                            <td data-bind="text: numero"></td>
-                            <td data-bind="text: nombre"></td>
-                            <td data-bind="text: posicion"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+      </div>
+    </nav>
+    <div class="mobile">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="/index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/observable.html">Observables</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/listado.html">Listados</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/binding.html">Enlace de datos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/condicionales.html">Condicionales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/visible.html">Visible</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <hr>
+      </nav>
     </div>
-	<script type="text/javascript" src="js/jquery.slim.min.js"></script>
-	<script type="text/javascript" src="js/popper.min.js"></script>	
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>			
-	<script type="text/javascript" src="js/knockout.min.js"></script>			
+    <div class="container pt-5">
+      <hr />
+      <div class="row mt-3">
+        <div class="col-md-6">
+          <table class="table table-bordered table-hovered table-striped">
+            <thead class="bg-primary">
+              <tr>
+                <th>Número</th>
+                <th>Nombre</th>
+                <th>Posición</th>
+              </tr>
+            </thead>
+            <!-- Iteración de los elementos de data -->
+            <!-- Si en viewModel se llamada registros en la vista tiene que usarse ese nombre -->
+            <tbody data-bind="foreach: registros">
+              <tr>
+                <td data-bind="text: numero"></td>
+                <td data-bind="text: nombre"></td>
+                <td data-bind="text: posicion"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <hr />
+    </div>
+    <script type="text/javascript" src="js/jquery.slim.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/knockout.min.js"></script>
     <script type="text/javascript" src="js/appListado.js"></script>
     <script type="text/javascript" src="js/datos.js"></script>
     <script type="text/javascript" src="js/viewmodel.js"></script>
-</body>
+  </body>
 </html>

@@ -27,6 +27,50 @@
         </div>
       </div>
     </nav>
+    <div class="mobile">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="/index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/observable.html">Observables</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/listado.html">Listados</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/binding.html">Enlace de datos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/condicionales.html">Condicionales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/visible.html">Visible</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
     <div class="container pt-5">
       <hr />
       <h3>Data Binding Visible</h3>
@@ -35,10 +79,13 @@
         <div class="col-md-12">
           <div class="form-group">
             <div>
-
               <label for="nombre">Nombre:</label>
               <!-- El valor del input ligado con la variable nombre -->
-              <input type="text" class="form-control" data-bind="textInput:nombre">
+              <input
+                type="text"
+                class="form-control"
+                data-bind="textInput:nombre"
+              />
             </div>
           </div>
         </div>
@@ -61,25 +108,37 @@
         </div>
       </div>
       <hr />
-      <div class="row" >
+      <div class="row">
         <div class="col">
-            <div class="alert alert-success" data-bind="visible: aceptasTerminosCondiciones">
-                <h1>En hora buena <strong data-bind="text: nombre"></strong>, haz click en el botón continuar para acceder a nuestro sitio</h1>
-            </div>
-            <div class="alert alert-warning" data-bind="visible: !aceptasTerminosCondiciones()">
-              <h4>Es necesario aceptar los términos y condicionales para continuar <strong data-bind="text: nombre"></strong>...</h4>
+          <div
+            class="alert alert-success"
+            data-bind="visible: aceptasTerminosCondiciones"
+          >
+            <h1>
+              En hora buena <strong data-bind="text: nombre"></strong>, haz
+              click en el botón continuar para acceder a nuestro sitio
+            </h1>
+          </div>
+          <div
+            class="alert alert-warning"
+            data-bind="visible: !aceptasTerminosCondiciones()"
+          >
+            <h4>
+              Es necesario aceptar los términos y condicionales para continuar
+              <strong data-bind="text: nombre"></strong>...
+            </h4>
           </div>
         </div>
       </div>
     </div>
-    <hr>
+    <hr />
     <div class="container">
-        <div class="col-12">
-            <p>
-                El uso del bind visible, en la práctica permite intercalar un estilo CSS para mostrar u ocultar un data-bind
-            </p>
-            
-        </div>
+      <div class="col-12">
+        <p>
+          El uso del bind visible, en la práctica permite intercalar un estilo
+          CSS para mostrar u ocultar un data-bind
+        </p>
+      </div>
     </div>
     <script type="text/javascript" src="js/jquery.slim.min.js"></script>
     <script type="text/javascript" src="js/popper.min.js"></script>
