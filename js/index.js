@@ -4,7 +4,7 @@ var viewModel = {
     bindings: ko.observable('Enlace de datos'),
     condicionales: ko.observable('Condicionales'),
     visible: ko.observable('Visible'),
-    tutorial: ko.observable('Tutorial'),
+    tutorial: ko.observable('Tutorial: learn.knockoutjs.com'),
     title:'Knockout.Js Fundamentals',
     subtitle: 'Binding: '
 };

@@ -1,146 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <title>KnockoutJS - Fundamentals</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <title>KnockoutJS - Fundamentals</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+          <a class="nav-link" href="/observable.html">Observables</a>
+          <a class="nav-link" href="/listado.html">Listados</a>
+          <a class="nav-link" href="/binding.html">Enlace de datos</a>
+          <a class="nav-link" href="/condicionales.html">Condicionales</a>
+          <a class="nav-link" href="/visible.html">Visible</a>
+          <a class="nav-link" href="/tutorial.html">Tutorial</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="/index.html"
-              >Home</a
-            >
-            <a class="nav-link" href="/observable.html">Observables</a>
-            <a class="nav-link" href="/listado.html">Listados</a>
-            <a class="nav-link" href="/binding.html">Enlace de datos</a>
-            <a class="nav-link" href="/condicionales.html">Condicionales</a>
-            <a class="nav-link" href="/visible.html">Visible</a>
-            <a class="nav-link" href="/tutorial.html">Tutorial</a>
-          </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/observable.html">Observables</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/listado.html">Listados</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/binding.html">Enlace de datos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/condicionales.html">Condicionales</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/visible.html">Visible</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/tutorial.html">Tutorial</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
-    <div class="mobile">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarTogglerDemo01"
-            aria-controls="navbarTogglerDemo01"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="/index.html"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/observable.html">Observables</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/listado.html">Listados</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/binding.html">Enlace de datos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/condicionales.html">Condicionales</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/visible.html">Visible</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/tutorial.html">Tutorial</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+  </div>
+  <div class="container pt-5">
+    <div class="row mb-3">
+      <h2 data-bind="text: title"></h2>
     </div>
-    <div class="container pt-5">
-      <div class="row mb-3">
-        <h2 data-bind="text: title"></h2>
+    <hr />
+    <div class="row">
+      <div class="col-md-12">
+        <label>Observables: </label>
+        <a href="/observable.html" style="text-decoration: none">
+          <span class="form-control-value" data-bind="text: observable"></span>
+        </a>
       </div>
-      <hr />
-      <div class="row">
-        <div class="col-md-12">
-          <label>Observables: </label>
-          <a href="/observable.html" style="text-decoration: none">
-            <span
-              class="form-control-value"
-              data-bind="text: observable"
-            ></span>
-          </a>
-        </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <label>Listados: </label>
+        <a href="/listado.html" style="text-decoration: none">
+          <span class="form-control-value" data-bind="text: lists"></span>
+        </a>
       </div>
-      <div class="row mt-3">
-        <div class="col-md-12">
-          <label>Listados: </label>
-          <a href="/listado.html" style="text-decoration: none">
-            <span class="form-control-value" data-bind="text: lists"></span>
-          </a>
-        </div>
-      </div>
+    </div>
 
-      <div class="row mt-3">
-        <div class="col-md-12">
-          <label>Enlace de datos: </label>
-          <a href="/binding.html" style="text-decoration: none">
-            <span class="form-control-value" data-bind="text: bindings"></span>
-          </a>
-        </div>
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <label>Enlace de datos: </label>
+        <a href="/binding.html" style="text-decoration: none">
+          <span class="form-control-value" data-bind="text: bindings"></span>
+        </a>
       </div>
-      <div class="row mt-3">
-        <div class="col-md-12">
-          <label>Condicionales: </label>
-          <a href="/binding.html" style="text-decoration: none">
-            <span
-              class="form-control-value"
-              data-bind="text: condicionales"
-            ></span>
-          </a>
-        </div>
-      </div>
-      <div class="row mt-3">
-        <div class="col-md-12">
-          <label>Visible: </label>
-          <a href="/visible.html" style="text-decoration: none">
-            <span class="form-control-value" data-bind="text: visible"></span>
-          </a>
-        </div>
-      </div>
-      <div class="row mt-3">
-        <div class="col-md-12">
-          <label>Tutorial: </label>
-          <a href="/tutorial.html" style="text-decoration: none">
-            <span class="form-control-value" data-bind="text: tutorial"></span>
-          </a>
-        </div>
-      </div>
-      <hr />
     </div>
-    <script type="text/javascript" src="js/jquery.slim.min.js"></script>
-    <script type="text/javascript" src="js/popper.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/knockout.min.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-  </body>
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <label>Condicionales: </label>
+        <a href="/binding.html" style="text-decoration: none">
+          <span class="form-control-value" data-bind="text: condicionales"></span>
+        </a>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <label>Visible: </label>
+        <a href="/visible.html" style="text-decoration: none">
+          <span class="form-control-value" data-bind="text: visible"></span>
+        </a>
+      </div>
+    </div>
+    <hr>
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <a href="/tutorial.html">
+          <h3 class="text-center" data-bind="text: tutorial"></h3>
+        </a>
+        <ol>
+          <li>
+            <a href="/introduccion.html" style="text-decoration: none">
+              <span class="form-control-value">Introducción</span>
+            </a>
+          </li>
+          <li>
+            <a href="/listandcollections.html" style="text-decoration: none">
+              <span class="form-control-value">List and collections</span>
+            </a>
+          </li>
+          <li>
+            <a href="/spa.html" style="text-decoration: none">
+              <span class="form-control-value">Single page applications</span>
+            </a>
+          </li>
+          <li>
+            <a href="/custombindings.html" style="text-decoration: none">
+              <span class="form-control-value">Custom Bindings</span>
+            </a>
+          </li>
+          <li>
+            <a href="/loadingsavingdata.html" style="text-decoration: none">
+              <span class="form-control-value">Loading and Saving Data</span>
+            </a>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <hr />
+  </div>
+  <script type="text/javascript" src="js/jquery.slim.min.js"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/knockout.min.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+</body>
+
 </html>
