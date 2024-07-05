@@ -64,16 +64,27 @@
     </div>
     <div class="row">
       <div class="col">
-        <!-- This is a *view* - HTML markup that defines the appearance of your UI -->
-        <p>First name: <strong data-bind="text: firstName"></strong></p>
-        <p>Last name: <strong data-bind="text: lastName"></strong></p>
-        <hr>
-        <p>First name: <input data-bind="value: firstName" /></p>
-        <p>Last name: <input data-bind="value: lastName" /></p>
-        <hr>
-        <p>Full name: <strong data-bind="text: fullName"></strong></p>
-        <hr>
-        <button data-bind="click: capitalizeLastName">Go caps</button>
+        <h2>Your seat reservations</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Passenger name</th>
+              <th>Meal</th>
+              <th>Surcharge</th>
+              <th></th>
+            </tr>
+          </thead>
+          <!-- Todo: Generate table body -->
+          <tbody data-bind="foreach: seats">
+            <tr>
+              <td data-bind="text: name"></td>
+              <td data-bind="text: meal().mealName"></td>
+              <td data-bind="text: meal().price"></td>
+            </tr>
+          </tbody>
+
+        </table>
       </div>
     </div>
     <hr />
@@ -82,7 +93,7 @@
   <script type="text/javascript" src="js/popper.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/knockout.min.js"></script>
-  <script type="text/javascript" src="js/tutorial.js"></script>
+  <script type="text/javascript" src="js/listsandcollections.js"></script>
 </body>
 
 </html>

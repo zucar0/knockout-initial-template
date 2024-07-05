@@ -1,4 +1,3 @@
-console.log('List And Collections');
 // Class to represent a row in the seat reservations grid
 function SeatReservation(name, initialMeal) {
     var self = this;
@@ -8,8 +7,9 @@ function SeatReservation(name, initialMeal) {
 
 // Overall viewmodel for this screen, along with initial state
 function ReservationsViewModel() {
-    var self = this;
 
+    var self = this;
+    self.title = ko.observable('Trabajando con Listas y Colecciones (Lists and Collections)');
     // Non-editable catalog data - would come from the server
     self.availableMeals = [
         { mealName: "Standard (sandwich)", price: 0 },
